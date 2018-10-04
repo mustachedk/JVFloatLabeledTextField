@@ -73,6 +73,12 @@ static CGFloat const kFloatingLabelHideAnimationDuration = 0.3f;
 
     _adjustsClearButtonRect = YES;
     _isFloatingLabelFontDefault = YES;
+    
+    _underlineView = [UIView new];
+    _underlineViewColor = [UIColor whiteColor];
+    _underlineView.backgroundColor = _underlineViewColor;
+    _underlineView.alpha = 1.0;
+    [self addSubview:_underlineView];
 }
 
 #pragma mark -
@@ -375,6 +381,12 @@ static CGFloat const kFloatingLabelHideAnimationDuration = 0.3f;
     else {
         [self showFloatingLabel:firstResponder];
     }
+    
+    _underlineView.frame = CGRectMake(0,
+                                      self.frame.size.height-1,
+                                      self.frame.size.width,
+                                      1);
+    _underlineView.backgroundColor = firstResponder ? _underlineViewColor : [_underlineViewColor colorWithAlphaComponent:0.5];
 }
 
 @end

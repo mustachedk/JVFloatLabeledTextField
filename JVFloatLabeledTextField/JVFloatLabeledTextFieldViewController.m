@@ -61,7 +61,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
     [self.view setTintColor:[UIColor blueColor]];
 #endif
-    
+    self.view.backgroundColor = UIColor.grayColor;
     UIColor *floatingLabelColor = [UIColor brownColor];
     
     JVFloatLabeledTextField *titleField = [[JVFloatLabeledTextField alloc] initWithFrame:CGRectZero];

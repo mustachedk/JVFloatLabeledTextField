@@ -49,6 +49,17 @@ IB_DESIGNABLE
 @property (nonatomic, strong, readonly) UILabel * floatingLabel;
 
 /**
+* Read-only access to the underline view.
+*/
+@property (nonatomic, strong, readonly) UIView * underlineView;
+
+/**
+ * Background Color for underline View.
+ * Defaults to `[UIColor whiteColor]`.
+ */
+@property (nonatomic, strong) IBInspectable UIColor * underlineViewColor;
+
+/**
  * Padding to be applied to the y coordinate of the floating label upon presentation.
  * Defaults to zero.
  */
